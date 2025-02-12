@@ -1,0 +1,30 @@
+<h1 class="text-center">Apartments in Residence</h1>
+
+<!-- Search Bar -->
+<div class="search-bar mb-4 text-center">
+  <input type="text" class="form-control w-50 mx-auto" placeholder="Search by category, floor, or surface..." [(ngModel)]="searchQuery" (input)="filterApartments()">
+</div>
+
+<!-- Display the Apartments -->
+<div class="d-flex flex-wrap justify-content-center gap-3">
+  <div *ngFor="let apartment of filteredApartments" class="apartment-card">
+    <div class="card shadow-lg" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ apartment.category }} Apartment</h5>
+        
+        <div class="details">
+          <p><strong>Apartment No:</strong> {{ apartment.apartNum }}</p>
+          <p><strong>Floor:</strong> {{ apartment.floorNum }}</p>
+          <p><strong>Surface:</strong> {{ apartment.surface }} m²</p>
+          <p *ngIf="apartment.terrace"><strong>Terrace:</strong> {{ apartment.surfaceterrace }} m²</p>
+        </div>
+
+        <div class="apartment-actions text-center">
+          <button class="btn btn-outline-danger" (click)="toggleFavorite(apartment)">
+            ❤️ {{ isFavorite(apartment) ? 'Remove from Favorites' : 'Add to Favorites' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

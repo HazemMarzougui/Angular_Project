@@ -1,0 +1,84 @@
+.residence-details {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.residence-details:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+h1 {
+  color: #343a40;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #495057;
+}
+
+.status-label {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.residence-image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.residence-image:hover {
+  transform: scale(1.05);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.next-btn {
+  background-color: #28a745;
+  color: white;
+  margin-top: 20px;
+}
+
+.next-btn:hover {
+  background-color: #218838;
+}
+
+.navigation {
+  margin-top: 20px;
+}

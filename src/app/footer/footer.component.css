@@ -1,0 +1,45 @@
+/* Apply flexbox to the body to make sure the footer stays at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Ensure the body takes up at least the full viewport height */
+}
+/* Footer styles */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #17a2b8; /* Bootstrap primary color */
+}
+
+p {
+  font-size: 14px;
+  margin-top: 5px;
+  opacity: 0.8;
+}

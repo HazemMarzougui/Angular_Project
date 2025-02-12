@@ -1,0 +1,15 @@
+<div class="residence-details">
+  <h1>{{ residence?.name }}</h1>
+  <p><strong>Address:</strong> {{ residence?.address }}</p>
+  <p><strong>Status:</strong> <span class="status-label">{{ residence?.status }}</span></p>
+  
+  <img [src]="residence?.image" alt="{{ residence?.name }}" class="residence-image">
+
+  <!-- Button to navigate to apartments for this residence -->
+  <button class="btn btn-primary" (click)="viewApartmentsByResidence()">View Apartments</button>
+
+  <!-- Button to go to the next residence -->
+  <div class="navigation">
+    <button class="next-btn" (click)="goToNextResidence()">Next Residence</button>
+  </div>
+</div>

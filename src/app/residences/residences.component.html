@@ -1,0 +1,29 @@
+<h1 style="text-align: center; padding: 2%;">Liste des résidences</h1>
+
+<!-- Search Bar -->
+<input type="text" class="form-control w-50 mx-auto mb-4" placeholder="Search by address..." [(ngModel)]="searchAddress" (input)="filterResidences()">
+
+<div class="d-flex flex-wrap justify-content-center gap-3">
+    <div *ngFor="let R of filteredResidences">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="R.image" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ R.name }}</h5>
+                
+                <h6 *ngIf="selectedResidenceId === R.id" class="card-title">{{ R.address }}</h6>
+                
+                <p class="card-text">
+                    <span *ngIf="R.status === 'Disponible'" class="text-success">✅ Disponible</span>
+                    <span *ngIf="R.status === 'En Construction'" class="text-warning">🚧 En Construction</span>
+                    <span *ngIf="R.status === 'Vendu'" class="text-danger">❌ Vendu</span>
+                </p>
+
+                <button class="btn btn-primary" (click)="showR(R)">Show Address</button>
+                <button class="btn btn-primary" [routerLink]="['/residences', R.id]">Details</button>
+                <button class="btn btn-outline-danger" (click)="toggleFavorite(R)">
+                    ❤️ {{ isFavorite(R) ? 'Unlike' : 'Like' }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
