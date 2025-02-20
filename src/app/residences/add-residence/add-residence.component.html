@@ -1,1 +1,31 @@
-<p>add-residence works!</p>
+<div class="form-container">
+    <h2>🏡 Add a New Residence</h2>
+  
+    <form (ngSubmit)="submitResidence()" #residenceForm="ngForm">
+      <!-- Name -->
+      <label for="name">Residence Name:</label>
+      <input type="text" id="name" [(ngModel)]="residence.name" name="name" required />
+  
+      <!-- Address -->
+      <label for="address">Address:</label>
+      <input type="text" id="address" [(ngModel)]="residence.address" name="address" required />
+  
+      <!-- Image URL -->
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" [(ngModel)]="residence.image" name="image" required />
+  
+      <!-- Status -->
+      <label for="status">Status:</label>
+      <select id="status" [(ngModel)]="residence.status" name="status" required>
+        <option value="Disponible">Disponible</option>
+        <option value="En Construction">En Construction</option>
+        <option value="Vendu">Vendu</option>
+      </select>
+  
+      <div class="buttons">
+        <button type="submit" class="btn btn-primary">Add Residence</button>
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

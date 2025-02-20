@@ -3,6 +3,7 @@
 <!-- Search Bar -->
 <input type="text" class="form-control w-50 mx-auto mb-4" placeholder="Search by address..." [(ngModel)]="searchAddress" (input)="filterResidences()">
 
+
 <div class="d-flex flex-wrap justify-content-center gap-3">
     <div *ngFor="let R of filteredResidences">
         <div class="card" style="width: 18rem;">
@@ -26,4 +27,8 @@
             </div>
         </div>
     </div>
+</div>
+<br>
+<div class="text-center mb-4">
+    <button class="btn btn-success" routerLink="/add-residence">➕ Add Residence</button>
 </div>

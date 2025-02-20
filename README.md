@@ -1,45 +1,27 @@
-# 🏡 Gestion des Résidences - Angular 16
+# UseCase
 
-Ce projet est une application Angular permettant de gérer des résidences et leurs appartements. Il met en œuvre un système de **navigation avancé** avec le **routage Angular**.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
----
+## Development server
 
-## 🚀 Objectifs du projet
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-- ✅ Créer des routes et naviguer entre différents composants
-- ✅ Passer des paramètres via l’URL et les récupérer
-- ✅ Gérer l’affichage dynamique des résidences et appartements
-- ✅ Rediriger l’utilisateur en cas d’URL invalide
+## Code scaffolding
 
----
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## 📂 Structure du projet
+## Build
 
-### 📁 **Composants principaux**
-- `AppComponent` : Composant racine
-- `HeaderComponent` : Barre de navigation
-- `FooterComponent` : Pied de page
-- `HomeComponent` : Page d'accueil
-- `NotFoundComponent` : Page d'erreur 404
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-### 📁 **Gestion des résidences**
-- `ResidencesComponent` : Liste des résidences
-- `ResidenceDetailsComponent` : Détails d’une résidence
-- `AddResidenceComponent` : Ajout et mise à jour d’une résidence
+## Running unit tests
 
-### 📁 **Gestion des appartements**
-- `ApartmentsComponent` : Liste des appartements
-- `ApartmentsByResidenceComponent` : Liste des appartements d’une résidence
-- `AddApartmentComponent` : Ajout d’un appartement
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
----
+## Running end-to-end tests
 
-## 🔧 **Installation et exécution**
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### 1️⃣ Prérequis
-- **Node.js** (version 18+ recommandée)
-- **Angular CLI** (version 16)
-  
-### 2️⃣ Installation des dépendances
-```sh
-npm install
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,1 +1,30 @@
-<p>add-apartment works!</p>
+<div class="form-container">
+    <h2>🏢 Add a New Apartment</h2>
+  
+    <form (ngSubmit)="submitApartment()" #apartmentForm="ngForm">
+      <!-- Residence ID -->
+      <label for="residenceId">Residence ID:</label>
+      <input type="number" id="residenceId" [(ngModel)]="apartment.residenceId" name="residenceId" required />
+  
+      <!-- Apartment Number -->
+      <label for="number">Apartment Number:</label>
+      <input type="text" id="number" [(ngModel)]="apartment.number" name="number" required />
+  
+      <!-- Floor -->
+      <label for="floor">Floor:</label>
+      <input type="number" id="floor" [(ngModel)]="apartment.floor" name="floor" required />
+  
+      <!-- Status -->
+      <label for="status">Status:</label>
+      <select id="status" [(ngModel)]="apartment.status" name="status" required>
+        <option value="Available">Available</option>
+        <option value="Occupied">Occupied</option>
+      </select>
+  
+      <div class="buttons">
+        <button type="submit" class="btn btn-primary">Add Apartment</button>
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  
